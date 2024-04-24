@@ -2,15 +2,28 @@ import java.util.Scanner;
 
 public class Table {
     Scanner sc= new Scanner(System.in);
-    char table[][];
-    char player1= 'x';
-    char player2= 'o';
+    char [][] table;
+    char player1= 'x'; //juda.getficha
+    char player2= 'o'; //juda.getficha
 
-    public Table(int tamano) {
-        table= new char[tamano][tamano];
+    public Table() {
+        inicializarTablero();
+        //table= new Table[][];
     }
 
-    public void printTable() {
+    public void inicializarTablero() {
+        tableSize();
+        printTable();
+    }
+
+    private void tableSize() {
+        int size;
+        System.out.print("Elige tamano del tablero: ");
+        size= sc.nextInt();
+        table= new char[size][size];
+    }
+
+    private void printTable() {
         for (int i= 0; i< table.length; i++) {
             for (int j= 0; j< table.length; j++) {
                 table[i][j]= ' ';
@@ -29,7 +42,7 @@ public class Table {
         }
     }
 
-    public boolean introduceFicha(boolean turn, Jugador p1, Jugador p2) {
+    public boolean introduceFicha(boolean turn, Jugador jugador) {
         int fila;
         int columna;
 
