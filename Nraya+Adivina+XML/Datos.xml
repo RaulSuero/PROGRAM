@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<games>
+    <game>
+        <type>NEnRaya</type>
+        <size>3</size>
+        <players>
+            <player>
+                <name>Juan</name>
+                <token>J</token>
+                <turn>false</turn>
+            </player>
+            <player>
+                <name>Raul</name>
+                <token>R</token>
+                <turn>true</turn>
+            </player>
+        </players>
+    </game>
+    <game>
+        <type>Aleatorio</type>
+        <players>
+            <player>
+                <name>Ale</name>
+                <token>A</token>
+                <turn>true</turn>
+            </player>
+            <player>
+                <name>Dani</name>
+                <token>D</token>
+                <turn>false</turn>
+            </player>
+        </players>
+    </game>
+</games>
